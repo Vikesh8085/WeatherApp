@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherGeneralCell" rowHeight="84" id="K4I-sJ-yd8" customClass="WeatherGeneralCell" customModule="Weather_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="624" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K4I-sJ-yd8" id="IAP-hD-51p">
+                <rect key="frame" x="0.0" y="0.0" width="624" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EL-P0-m4T">
+                        <rect key="frame" x="20" y="8" width="584" height="20"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0oJ-J1-JIP">
+                                <rect key="frame" x="0.0" y="0.0" width="584" height="20"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2no-jm-rvT">
+                                        <rect key="frame" x="0.0" y="0.0" width="584" height="20"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3kt-32-qLl">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="20"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="chb-jd-o9D">
+                                                        <rect key="frame" x="0.0" y="0.5" width="32" height="19"/>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="bly-AM-cXp"/>
+                                                            <constraint firstAttribute="width" constant="32" id="oXt-fJ-vAv"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLz-xA-8Sd">
+                                                        <rect key="frame" x="36" y="0.0" width="146.5" height="20"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnX-1z-muA">
+                                                <rect key="frame" x="192.5" y="0.0" width="391.5" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0oJ-J1-JIP" secondAttribute="trailing" id="0XF-xW-Jvz"/>
+                            <constraint firstItem="0oJ-J1-JIP" firstAttribute="leading" secondItem="0EL-P0-m4T" secondAttribute="leading" id="UM6-jT-5Se"/>
+                            <constraint firstItem="0oJ-J1-JIP" firstAttribute="top" secondItem="0EL-P0-m4T" secondAttribute="top" id="s1a-Zk-z6Q"/>
+                            <constraint firstAttribute="bottom" secondItem="0oJ-J1-JIP" secondAttribute="bottom" id="wHM-GX-Jsl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.43529411759999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="0EL-P0-m4T" secondAttribute="bottom" constant="8" id="0b9-H9-ha0"/>
+                    <constraint firstItem="0EL-P0-m4T" firstAttribute="top" secondItem="IAP-hD-51p" secondAttribute="top" constant="8" id="5XB-iK-YKf"/>
+                    <constraint firstItem="0EL-P0-m4T" firstAttribute="leading" secondItem="IAP-hD-51p" secondAttribute="leadingMargin" id="JFe-fV-MiN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0EL-P0-m4T" secondAttribute="trailing" id="Tb6-wj-zyx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="340.57971014492756" y="105.80357142857143"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sun.min.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
