@@ -10,7 +10,9 @@ import UIKit
 class WeatherDetailViewController: BaseViewController {
 
     @IBOutlet weak var tableView: WeatherDetailTableView?
-    var dataModel: WeatherModel?
+    var weather: WeatherModel?
+    var city: City?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +20,9 @@ class WeatherDetailViewController: BaseViewController {
     }
     
     private func setUpView() {
-        tableView?.dataModel = dataModel
-        
+        tableView?.weather = weather
+        tableView?.city = city
+        tableView?.reloadData()
     }
 
 }

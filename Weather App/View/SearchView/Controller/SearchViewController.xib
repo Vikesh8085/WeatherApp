@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Weather_App" customModuleProvider="target">
             <connections>
+                <outlet property="searchButton" destination="tT0-Tb-aZt" id="08M-W9-35D"/>
+                <outlet property="searchTextField" destination="qVk-rK-pu3" id="klT-SL-OQp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +21,52 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT0-Tb-aZt">
-                    <rect key="frame" x="160" y="206" width="114" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    <connections>
-                        <action selector="callDetailController:" destination="-1" eventType="touchUpInside" id="Dsj-Rw-8iZ"/>
-                    </connections>
-                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Weather Forcast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUo-mS-vVw">
+                    <rect key="frame" x="20" y="69" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="huJ-We-qLe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="20"/>
+                    <color key="textColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="djv-EO-bcx">
+                    <rect key="frame" x="30" y="390.5" width="354" height="115"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter CIty Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVk-rK-pu3">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="kyx-Pz-BWo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT0-Tb-aZt">
+                            <rect key="frame" x="0.0" y="70" width="354" height="45"/>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                            <connections>
+                                <action selector="callDetailController:" destination="-1" eventType="touchUpInside" id="Dsj-Rw-8iZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="djv-EO-bcx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6Eu-7M-eng"/>
+                <constraint firstItem="djv-EO-bcx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bmn-0z-r8S"/>
+                <constraint firstItem="djv-EO-bcx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aUo-mS-vVw" secondAttribute="bottom" constant="50" id="FUg-Va-Yab"/>
+                <constraint firstItem="aUo-mS-vVw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JFB-FB-wYj"/>
+                <constraint firstItem="aUo-mS-vVw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="VVc-n4-yYj"/>
+                <constraint firstItem="aUo-mS-vVw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fhT-Go-zoe"/>
+                <constraint firstItem="djv-EO-bcx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="gFT-Q3-rnK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="djv-EO-bcx" secondAttribute="trailing" constant="30" id="rnF-pw-rL1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aUo-mS-vVw" secondAttribute="trailing" constant="20" id="vIt-ii-gI7"/>
+            </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="93.75"/>
         </view>
     </objects>

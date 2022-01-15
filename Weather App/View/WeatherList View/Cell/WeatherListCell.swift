@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WeatherListCell: UITableViewCell {
 
@@ -26,7 +27,12 @@ class WeatherListCell: UITableViewCell {
 
     func setData(data: WeatherModel?) {
         
-        self.lblDate?.text = data?.dt_txt
+        if let date = data?.dt?.setupData() {
+            lblDate?.text = date
+        } else {
+            lblDate?.text = "No Date"
+        }
+        
         if let status =  data?.weather?.first?.weatherDescription {
             self.lblStatus?.text = status.uppercased()
         } else {
@@ -57,7 +63,16 @@ class WeatherListCell: UITableViewCell {
         } else {
             self.lblVisibilty?.text = "N/A"
         }
+        
+        if let id = data?.weather?.first?.icon, let url = URL(string: "http://openweathermap.org/img/wn/\(id)@2x.png") {
+            
+            self.icon?.sd_setImage(with: url, placeholderImage: UIImage(named: "icons8-wind-turbine-50")!, options: .delayPlaceholder, completed: { img, erro, type, url in
+                print(img, erro, type, url)
+            })
+        }
 
     }
+    
+    
     
 }

@@ -27,6 +27,8 @@
 		FA4179CF2792CBD2004B8F16 /* WeatherGeneralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4179CE2792CBD2004B8F16 /* WeatherGeneralCell.swift */; };
 		FA4179D12792CBEC004B8F16 /* WeatherGeneralCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4179D02792CBEC004B8F16 /* WeatherGeneralCell.xib */; };
 		FA4179D82792E1AD004B8F16 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4179D72792E1AD004B8F16 /* Int + Extension.swift */; };
+		FA4179DB27930219004B8F16 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4179DA27930219004B8F16 /* Validator.swift */; };
+		FA4179E227930AD4004B8F16 /* Doublr + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4179E127930AD4004B8F16 /* Doublr + Extension.swift */; };
 		FAA59C3D27920D6400C18FFF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC276292791EE0900CC3D7F /* SearchViewController.swift */; };
 		FAA59C42279210D800C18FFF /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA59C41279210D800C18FFF /* SearchScreen.swift */; };
 		FAA59C44279212F300C18FFF /* SearchScreenTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA59C43279212F300C18FFF /* SearchScreenTesting.swift */; };
@@ -93,6 +95,8 @@
 		FA4179CE2792CBD2004B8F16 /* WeatherGeneralCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGeneralCell.swift; sourceTree = "<group>"; };
 		FA4179D02792CBEC004B8F16 /* WeatherGeneralCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherGeneralCell.xib; sourceTree = "<group>"; };
 		FA4179D72792E1AD004B8F16 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
+		FA4179DA27930219004B8F16 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		FA4179E127930AD4004B8F16 /* Doublr + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Doublr + Extension.swift"; sourceTree = "<group>"; };
 		FAA59C3F27920F2D00C18FFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FAA59C41279210D800C18FFF /* SearchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		FAA59C43279212F300C18FFF /* SearchScreenTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTesting.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 		FAC276342791FE5A00CC3D7F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FA4179DA27930219004B8F16 /* Validator.swift */,
 				FAC276452792085000CC3D7F /* Constant */,
 				FAC276422792076000CC3D7F /* Reachability */,
 				FAC276352791FE6200CC3D7F /* Extenstion */,
@@ -314,6 +319,7 @@
 				FA4179BA2792A529004B8F16 /* UITableViewCell+Extension.swift */,
 				FA4179BC2792A564004B8F16 /* UITableViewHeaderFooterView+Extension.swift */,
 				FA4179D72792E1AD004B8F16 /* Int + Extension.swift */,
+				FA4179E127930AD4004B8F16 /* Doublr + Extension.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -640,9 +646,11 @@
 				FA4179C02792A5C1004B8F16 /* WeatherListCell.swift in Sources */,
 				FAC2763D2791FF2100CC3D7F /* SearchViewModel.swift in Sources */,
 				FAC276332791FDF300CC3D7F /* WeatherModel.swift in Sources */,
+				FA4179E227930AD4004B8F16 /* Doublr + Extension.swift in Sources */,
 				FA4179D82792E1AD004B8F16 /* Int + Extension.swift in Sources */,
 				FAC275F52791ED6400CC3D7F /* AppDelegate.swift in Sources */,
 				FA4179B02792A2D0004B8F16 /* WeatherListViewController.swift in Sources */,
+				FA4179DB27930219004B8F16 /* Validator.swift in Sources */,
 				FA4179C72792C8A5004B8F16 /* WeatherDetailTimeCell.swift in Sources */,
 				FA4179CD2792CA42004B8F16 /* WeatherDetailCell.swift in Sources */,
 			);

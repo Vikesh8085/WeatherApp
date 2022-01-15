@@ -29,7 +29,8 @@ class WeatherListViewController: BaseViewController {
     private func callWeatherListScreen(data: WeatherModel?) {
         
         let detailVC = WeatherDetailViewController(nibName: "WeatherDetailViewController", bundle: nil)
-        detailVC.dataModel = data
+        detailVC.weather = data
+        detailVC.city = weatherForcast?.city
         self.navigationController?.pushViewController(detailVC, animated: true)
         
     }

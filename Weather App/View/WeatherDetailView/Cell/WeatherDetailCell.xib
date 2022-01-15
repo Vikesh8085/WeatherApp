@@ -70,7 +70,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.0" green="0.43529411759999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="GL2-9W-SYH" firstAttribute="leading" secondItem="QfT-5Y-2Xx" secondAttribute="leading" constant="20" id="LbL-ZT-u26"/>
                     <constraint firstAttribute="bottom" secondItem="GL2-9W-SYH" secondAttribute="bottom" constant="24" id="d1x-CA-rTi"/>
@@ -79,6 +79,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="0M4-sm-2qT"/>
+            <connections>
+                <outlet property="tempLabel" destination="Nr1-Oj-Qfv" id="NXL-Ew-6kT"/>
+                <outlet property="weatherDescLabel" destination="YQs-KH-jqT" id="Z3y-yP-Rwi"/>
+                <outlet property="weatherMoreDetailsLabel" destination="nec-Dg-rga" id="FIe-xL-pgw"/>
+            </connections>
             <point key="canvasLocation" x="352.17391304347831" y="136.60714285714286"/>
         </tableViewCell>
     </objects>

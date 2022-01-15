@@ -34,9 +34,14 @@ final class NetworkManager {
                     failure(CustomError(statusCode: HTTPStatusCodes.tooManyRequests.rawValue, errorTitle: "429", errorDescription: "Too many requests"))
                 case HTTPStatusCodes.notFound:
                     failure(CustomError(statusCode: HTTPStatusCodes.notFound.rawValue, errorTitle: "404", errorDescription: "Not Found"))
+                case HTTPStatusCodes.cityNotFound:
+                    failure(CustomError(statusCode: HTTPStatusCodes.notFound.rawValue, errorTitle: "404", errorDescription: "City Not Found"))
                 case HTTPStatusCodes.unAvailable:
                     failure(CustomError(statusCode: HTTPStatusCodes.unAvailable.rawValue, errorTitle: "503", errorDescription: "Un Available"))
+                default:
+                    failure(CustomError(statusCode: HTTPStatusCodes.unAvailable.rawValue, errorTitle: "503", errorDescription: "Un Available"))
                 }
+              
             }
         }.resume()
     }

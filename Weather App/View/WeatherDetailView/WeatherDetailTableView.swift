@@ -10,8 +10,9 @@ import UIKit
 
 final class WeatherDetailTableView: UITableView {
     
-    var dataModel: WeatherModel?
-
+    var weather: WeatherModel?
+    var city: City?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configTableView()
@@ -85,6 +86,7 @@ extension WeatherDetailTableView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         referCell.selectionStyle = .none
+        referCell.setupData(date: weather?.dt, city: city, image: weather?.weather?.first?.icon)
         return referCell
     }
     
@@ -92,6 +94,7 @@ extension WeatherDetailTableView: UITableViewDelegate, UITableViewDataSource {
         guard let referCell = self.dequeueReusableCell(withIdentifier: WeatherDetailCell.identifier, for: indexPath) as? WeatherDetailCell else {
             return UITableViewCell()
         }
+        referCell.setupData(data: weather)
         referCell.selectionStyle = .none
         return referCell
     }
@@ -100,6 +103,7 @@ extension WeatherDetailTableView: UITableViewDelegate, UITableViewDataSource {
         guard let referCell = self.dequeueReusableCell(withIdentifier: WeatherGeneralCell.identifier, for: indexPath) as? WeatherGeneralCell else {
             return UITableViewCell()
         }
+        referCell.setupData(data: weather, currentIndex: indexPath.row)
         referCell.selectionStyle = .none
         return referCell
     }

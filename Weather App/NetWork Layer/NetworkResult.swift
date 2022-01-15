@@ -12,6 +12,7 @@ enum HTTPStatusCodes: Int, Equatable {
     
     case success = 200
     case notFound = 400
+    case cityNotFound = 404
     case tooManyRequests = 429
     case unAvailable = 503
     
